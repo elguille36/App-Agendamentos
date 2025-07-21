@@ -12,6 +12,7 @@ export default function Navbar() {
   };
 
   return (
+    <>
     <nav className="bg-blue-500 text-amber-100 px-4 py-1 flex justify-between items-center">
 
       {/* Botão para mobile */}
@@ -39,34 +40,7 @@ export default function Navbar() {
         </div>
       )}
     </nav>
+  
+    </>
   );
 }
-
-
-
-
-
-
-
-
-
-// import {Link} from 'react-router-dom';
-// import CadastroAgendamento from './cadastroagendamento.jsx';
-
-
-//  export default function NavBar(){
-
-// return(
-
-//     <div>
-
-//  <nav className='nav-bar'>
-//       <a className='link-nav' href='https://bit.ly/4jR3zWq' target='_blank'>Almoço Misionarios</a>
-//       <a className='link-nav' href='https://docs.google.com/spreadsheets/d/1J5xSG7R2HJuGCKx1w34xqHyAXFKashB-7N8eBi_oTE8/edit?gid=1173913733#gid=1173913733' target='_blank'>Grupo de Limpeza</a>
-//       <Link className='link-nav' to= '/cadastroAgendamento' element ={<CadastroAgendamento/>}>Agenda Entrevista</Link>
-//       <Link className='link-nav' to = '' element >Access @Admin</Link>
-//    </nav>
-
-//     </div>
-// )
-// }

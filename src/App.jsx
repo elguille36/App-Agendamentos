@@ -3,6 +3,7 @@ import Cabezalho from './componentes/header'
 import NavBar from './componentes/navbar'
 import BannerCarrossel from './componentes/bannercarrousel'
 import Footer from './componentes/footer'
+import Comunicado from './componentes/informacao'
 // import CadastroAgendamneto from './componentes/cadastroagendamento'
 // import Comunicado from './componentes/informacao'
 
@@ -15,6 +16,9 @@ function App() {
       {/* <NavBar />  */}
       </div>
        <NavBar /> 
+    </div>
+    <div className='flex justify-center '>
+      <Comunicado/>
     </div>
       {/* <NavBar />  */}
     <div className='box-banner'>
