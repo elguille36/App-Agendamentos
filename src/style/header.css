@@ -290,4 +290,11 @@
     width:10%;
 }
 
+.box-banner{
+
+    margin: auto;
+    padding: 1rem;
+    background-color: #b8d0f7;
+}
+
 }

@@ -10,7 +10,7 @@ export default function AgendamentoForm() {
     nome: '',
     data: '',
     horario: '',
-    agendamento: '',
+    entrevista: '',
     observacao: ''
   });
 
@@ -25,7 +25,7 @@ const handleSubmit = async (e) => {
   try {
     await criarAgendamento(form);
     alert("Agendamento enviado com sucesso!");
-    setForm({ nome: '', data: '', horario: '', agendamento: '', observacao: '' });
+    setForm({ nome: '', data: '', horario: '', entrevista: '', observacao: '' });
   } catch (err) {
     console.error('Erro ao enviar agendamento:', err);
     alert("Erro ao enviar agendamento. Tente novamente.");
@@ -69,8 +69,8 @@ const handleSubmit = async (e) => {
       />
 
       <select
-        name="agendamento"
-        value={form.agendamento}
+        name="entrevista"
+        value={form.entrevista}
         onChange={handleChange}
         className="w-full  p-2 border border-gray-300 rounded bg-blue-100"
         required

@@ -44,8 +44,8 @@ export default function AdminAgendamentos() {
             <th className="border p-2">Nome</th>
             <th className="border p-2">Data</th>
             <th className="border p-2">Horário</th>
-            <th className="border p-2">Agendamentos</th>
-            <th className="border p-2">Ações</th> 
+            <th className="border p-2">Entrevista</th>
+            <th className="border p-2">Abservações</th> 
           </tr>
         </thead>
         <tbody>
@@ -59,7 +59,7 @@ export default function AdminAgendamentos() {
                 <td className="border p-2">{ag.nome}</td>
                 <td className="border p-2">{ag.data}</td>
                 <td className="border p-2">{ag.horario}</td>
-                <td className="border p-2">{ag.entrevista}</td>
+                <td className="border p-2">{ag.Entrevista}</td>
                 <td className="border p-2 text-center">
                   <button
                     onClick={() => handleDelete(ag.id)}
