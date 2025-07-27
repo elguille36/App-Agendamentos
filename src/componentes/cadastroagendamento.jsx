@@ -76,17 +76,17 @@ const handleSubmit = async (e) => {
         required
       >
         <option value="">Tipo de Agendamentos</option>
-        <option value="Bispo Patelli">Entv.1ra Recomendação</option>
-        <option value="Bispo Patelli">Entv.Acerto Anual Dizimo</option>
-        <option value="1ro e 2do Conselheiro">Entv.Renovação da Recomendação</option>
-        <option value="Bispo Patelli">Entv.Benção Patriarcal</option>
-        <option value="Bispo Patelli">Entv.Assunto Sigiloso</option>
-        <option value="Prednt.Cuorums Elderes">Assunto da Familia</option>
-        <option value="Predencia do Courums">Assunto Ministração Elderes</option>
-        <option value="Presidencia Soc.soc">Assunto Ministração Soc.soc </option>
-        <option value="Presidenta Soc.soc">Assunto Familiares Bem-Estar</option>
-        <option value="Odair Figueiredo">Caravana ao Templo</option>
-        <option value="Obispado">Outros Assunto Mencione Qual 👇</option>
+        <option value="Entv.1ra Recomendação">Entv.1ra Recomendação</option>
+        <option value="Entv.Acerto Anual Dizimo">Entv.Acerto Anual Dizimo</option>
+        <option value="Entv.Renovação da Recomendação">Entv.Renovação da Recomendação</option>
+        <option value="Entv.Benção Patriarcal">Entv.Benção Patriarcal</option>
+        <option value="Entv.Assunto Sigiloso">Entv.Assunto Sigiloso</option>
+        <option value="Assunto da Familia">Assunto da Familia</option>
+        <option value="Assunto Ministração Elderes">Assunto Ministração Elderes</option>
+        <option value="Assunto Ministração Soc.soc">Assunto Ministração Soc.soc </option>
+        <option value="Assunto Familiares Bem-Estar">Assunto Familiares Bem-Estar</option>
+        <option value="Caravana ao Templo">Caravana ao Templo</option>
+        <option value="Outros Assunto Mencione Qual">Outros Assunto Mencione Qual 👇</option>
       </select>
 
       <textarea

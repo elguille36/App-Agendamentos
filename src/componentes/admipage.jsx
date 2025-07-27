@@ -3,6 +3,7 @@ import AdmAgendamentos from './admagendamento';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import App from '../App';
+import {LogOut} from 'lucide-react';
 
 export default function AdminPage() {
   const [logado, setLogado] = useState(false);
@@ -62,17 +63,16 @@ export default function AdminPage() {
   }
 
   return (
-    <div className="p-4">
-      <div className="flex justify-between items-center mb-4">
+    <div className="p-1 overflow-x-auto">
+      <div className="w-full flex justify-between items-center mb-4 bg-gray-50 p-1">
         <h2 className="text-2xl font-bold">Painel do Administrador</h2>
         <button
           onClick={handleLogout}
-          className="bg-red-500 text-white px-4 py-1 rounded hover:bg-red-600"
-        >
-          Sair
+          className=" px-4 py-1 rounded cursor-pointer "
+        ><LogOut className='w-5 h-5 text-blue-950'/>
+        Sair
         </button>
       </div>
-
       <AdmAgendamentos />
     </div>
   );
