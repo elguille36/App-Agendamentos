@@ -6,6 +6,7 @@ import Footer from './footer';
 import { criarAgendamento } from '@/api/agendamentos';
 
 export default function AgendamentoForm() {
+  const [mensagem, setMensagem] = useState('');
   const [form, setForm] = useState({
     nome: '',
     data: '',
@@ -24,11 +25,12 @@ const handleSubmit = async (e) => {
 
   try {
     await criarAgendamento(form);
-    alert("Agendamento enviado com sucesso!");
+    setMensagem('✅Agendado com sucesso!');
+      setTimeout(() => setMensagem(''), 3000); 
     setForm({ nome: '', data: '', horario: '', entrevista: '', observacao: '' });
   } catch (err) {
-    console.error('Erro ao enviar agendamento:', err);
-    alert("Erro ao enviar agendamento. Tente novamente.");
+     setMensagem('Erro ao criar agendamento.');
+      setTimeout(() => setMensagem(''), 3000);
   }
 };
 
@@ -37,6 +39,14 @@ const handleSubmit = async (e) => {
     <div className='box-cadastro'>
     <Link className='link-home' to='/' element={<App/>}>Ir para Inicio</Link>
     <div className="box-cadastro-content">
+        {mensagem && (
+    <div
+      className={`absolute top-7 sm:text-lg left-40 p-3 w-80 rounded flex items-center gap-2 text-blue-900
+      ${mensagem.includes('Erro') ? 'bg-red-500' : 'bg-gray-300'}`}
+    >
+      {mensagem}
+    </div>
+  )}
     <form onSubmit={handleSubmit} className="max-w-md mx-auto p-6 bg-blue-300 rounded-xl shadow-md space-y-4">
       <h2 className="text-2xl font-bold text-center">Novo Agendamento</h2>
 
@@ -76,10 +86,10 @@ const handleSubmit = async (e) => {
         required
       >
         <option value="">Tipo de Agendamentos</option>
-        <option value="Entv.1ra Recomendação">Entv.1ra Recomendação</option>
-        <option value="Entv.Acerto Anual Dizimo">Entv.Acerto Anual Dizimo</option>
-        <option value="Entv.Renovação da Recomendação">Entv.Renovação da Recomendação</option>
-        <option value="Entv.Benção Patriarcal">Entv.Benção Patriarcal</option>
+        <option value="Entv. 1ra Recomendação">Entv.1ra Recomendação</option>
+        <option value="Entv. Acerto Anual Dizimo">Entv.Acerto Anual Dizimo</option>
+        <option value="Entv. Renovação da Recomendação">Entv.Renovação da Recomendação</option>
+        <option value="Entv Benção Patriarcal">Entv.Benção Patriarcal</option>
         <option value="Entv.Assunto Sigiloso">Entv.Assunto Sigiloso</option>
         <option value="Assunto da Familia">Assunto da Familia</option>
         <option value="Assunto Ministração Elderes">Assunto Ministração Elderes</option>
@@ -108,6 +118,7 @@ const handleSubmit = async (e) => {
     </div>
     <Footer />
     </div>
-    </>
+   </>
+    
   );
 }

@@ -6,6 +6,7 @@ export default function AdminAgendamentos() {
   const [agendamentos, setAgendamentos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [erro, setErro] = useState(null);
+  const [mensagem, setMensagem] = useState('');
 
   const carregarAgendamentos = async () => {
     try {
@@ -20,12 +21,15 @@ export default function AdminAgendamentos() {
   };
 
   const handleDelete = async (id) => {
-    if (!confirm('Tem certeza que deseja excluir este agendamento?')) return;
+
     try {
       await deleteAgendamento(id);
       setAgendamentos(agendamentos.filter((a) => a.id !== id));
+      setMensagem('Exluido com Succeso');
+      setTimeout(() => setMensagem(''), 3000);
     } catch (err) {
-      alert('Erro ao excluir agendamento.');
+      setMensagem('erro ao excluir agendamento');
+      setTimeout(() => setMensagem(''), 3000);
     }
   };
 
@@ -38,16 +42,16 @@ export default function AdminAgendamentos() {
 
   return (
     <div className="p-3 max-w-3x1 mx-auto">
-      <h2 className="text-lg sm:text-2xl font-bold mb-4 text-center">Agendamentos</h2>
+      <h2 className="text-lg sm:text-2xl font-bold mb-4 text-center">Tipos de Agendamentos:</h2>
       <div className="overflow-x-auto">
       <table className="min-w-full text-sm sm:text-base">
         <thead className=" border-b border-blue-700">
           <tr className="h-10">
-            <th className=" text-left px-3 py-2">Nome</th>
-            <th className=" text-left px-3 py-2">Data</th>
-            <th className=" text-left px-3 py-2">Horário</th>
-            <th className=" text-left px-3 py-2">Entrevista</th>
-            <th className=" text-left px-2 py-2 hidden sm:table-cell">Observação</th> 
+            <th className=" text-left px-3 py-2">Nome:</th>
+            <th className=" text-left px-3 py-2">Data:</th>
+            <th className=" text-left px-3 py-2">Horário:</th>
+            <th className=" text-left px-3 py-2">Agendamentos:</th>
+            <th className=" text-left px-2 py-2 hidden sm:table-cell">Observação:</th> 
           </tr>
         </thead>
         <tbody>
@@ -71,6 +75,12 @@ export default function AdminAgendamentos() {
                    <Trash2 className="w-5 h-5" />
     
                   </button>
+                  
+                 {mensagem && (
+                 <div className="absolute top-10 sm:text-lg left-50 p-3 rounded bg-gray-300 text-red-800 shadow">
+                 {mensagem}
+                 </div>
+                 )}
                 </td>
               </tr>
             ))
