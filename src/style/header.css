@@ -175,7 +175,7 @@
     align-items: center;
     height: 15vh;
     width: 100%;
-    background-color: #240691;
+    background-color: #20201e;
     color: #e2e8ee;
 }
 
@@ -184,6 +184,13 @@
     width: 80%;
     font-size: 0.8rem;
     text-align: center;
+}
+
+.paragrafo-copy2{
+    width: 80%;
+    font-size: 0.8rem;
+    text-align: center;
+    background-color: #20201e;
 }
 
 @media(max-width:720px){
@@ -258,7 +265,9 @@
      padding: 2rem 1rem;
 }
     
-
+.footer{
+    height: auto;
+}
 }
 
 @media(min-width:721px){
