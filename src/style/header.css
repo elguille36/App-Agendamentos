@@ -203,7 +203,11 @@
  .link-adm{
 
     font-size: 1rem;
-    color:blue;
+    color:rgb(245, 223, 193);
+    background-color: #3B82F6;
+    padding: 2px;
+    border-radius: 10px;
+    box-shadow: 0 1px 0 1px #6b6b66;
  }
 
  .span-logo-title{
