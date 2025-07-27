@@ -16,8 +16,8 @@ export default function Navbar() {
     <nav className="bg-blue-500 text-amber-100 px-4 py-1 flex justify-between items-center">
 
       {/* Botão para mobile */}
-      <button onClick={toggleMenu} className="md:hidden text-blue-50">
-        {menuAberto ? <X size={28} /> : <Menu size={28} />}
+      <button onClick={toggleMenu} className="md:hidden text-blue-50 flex">
+        {menuAberto ? <X size={28} /> : <Menu size={28} />}Menu
       </button>
 
       {/* Links de navegação - escondidos no mobile, visíveis no desktop */}
