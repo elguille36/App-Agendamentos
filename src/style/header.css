@@ -31,7 +31,7 @@
 
 .link-home-Cadastro{
 
-    margin:5rem 0 0 0;
+   margin: 0 0 5rem 1rem;
     color:rgb(34, 33, 31);
     font-Weight:500;
     background-color: #3B82F6;
@@ -55,6 +55,11 @@
     background-image: url(/img/ala-itupeva.png);
     background-position: center;
     background-size: cover;
+}
+
+.link-logo{
+
+    width: 40%;
 }
 
 .administrador{
@@ -230,7 +235,6 @@
 
     .logo{
 
-        width: 31%;
         height: auto;
         margin-left: 1rem;
     }
@@ -262,7 +266,7 @@
 
 .box-cadastro-content{
 
-     padding: 2rem 1rem;
+     padding: 2em 2rem;
 }
     
 .footer{

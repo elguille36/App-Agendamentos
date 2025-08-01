@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getAgendamentos, deleteAgendamento } from '@/api/agendamentos';
 import { Trash2 } from 'lucide-react';
+import Footer from './footer';
 
 export default function AdminAgendamentos() {
   const [agendamentos, setAgendamentos] = useState([]);
@@ -41,6 +42,7 @@ export default function AdminAgendamentos() {
   if (erro) return <p className="text-red-500">{erro}</p>;
 
   return (
+    <>
     <div className="p-3 max-w-3x1 mx-auto">
       <h2 className="text-lg sm:text-2xl font-bold mb-4 text-center">Tipos de Agendamentos:</h2>
       <div className="overflow-x-auto">
@@ -89,5 +91,7 @@ export default function AdminAgendamentos() {
       </table>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }

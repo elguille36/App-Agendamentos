@@ -1,8 +1,8 @@
 import { useState } from 'react';
-// import Comunicado from './informacao';
-import { Link } from 'react-router-dom';
-import App from '../App';
+// import { Link } from 'react-router-dom';
+// import App from '../App';
 import Footer from './footer';
+import Cabezalho from './header'
 import { criarAgendamento } from '@/api/agendamentos';
 
 export default function AgendamentoForm() {
@@ -36,8 +36,9 @@ const handleSubmit = async (e) => {
 
   return (
     <>
+    <Cabezalho/>
     <div className='box-cadastro'>
-    <Link className='link-home' to='/' element={<App/>}>Ir para Inicio</Link>
+    {/* <Link className='link-home' to='/' element={<App/>}>Ir para Inicio</Link> */}
     <div className="box-cadastro-content">
         {mensagem && (
     <div
@@ -86,11 +87,11 @@ const handleSubmit = async (e) => {
         required
       >
         <option value="">Tipo de Agendamentos</option>
-        <option value="Entv. 1ra Recomendação">Entv.1ra Recomendação</option>
-        <option value="Entv. Acerto Anual Dizimo">Entv.Acerto Anual Dizimo</option>
-        <option value="Entv. Renovação da Recomendação">Entv.Renovação da Recomendação</option>
-        <option value="Entv Benção Patriarcal">Entv.Benção Patriarcal</option>
-        <option value="Entv.Assunto Sigiloso">Entv.Assunto Sigiloso</option>
+        <option value="Entrevista 1ra Recomendação">Entrevista 1ra Recomendação</option>
+        <option value="Entrevista Acerto Anual Dizimo">Entrevista Acerto Anual Dizimo</option>
+        <option value="Entrevista Renovação da Recomendação">Entrevista Renovação da Recomendação</option>
+        <option value="Entrevista Benção Patriarcal">Entrevista Benção Patriarcal</option>
+        <option value="Entrevista Assunto Sigiloso">Entrevista Assunto Sigiloso</option>
         <option value="Assunto da Familia">Assunto da Familia</option>
         <option value="Assunto Ministração Elderes">Assunto Ministração Elderes</option>
         <option value="Assunto Ministração Soc.soc">Assunto Ministração Soc.soc </option>
