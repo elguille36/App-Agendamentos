@@ -64,7 +64,6 @@ const handleSubmit = async (e) => {
       <input
         type="date"
         name="data"
-        placeholder="Data"
         value={form.data}
         onChange={handleChange}
         className="w-full p-2 border border-gray-300 rounded bg-blue-100"
@@ -74,7 +73,6 @@ const handleSubmit = async (e) => {
       <input
         type="time"
         name="horario"
-        placeholder="Horario"
         value={form.horario}
         onChange={handleChange}
         className="w-full p-2 border border-gray-300 rounded bg-blue-100"
