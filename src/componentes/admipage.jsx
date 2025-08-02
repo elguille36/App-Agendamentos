@@ -18,8 +18,6 @@ export default function AdminPage() {
     // Simulação de login simples
     if (credenciais.email === 'admin@admin.com' && credenciais.senha === 'bispadoItupeva') {
       setLogado(true);
-      setMensagem('Bem-vindo Administrador');
-      setTimeout(() => setMensagem(''), 3000);
     } else {
        setMensagem('❌ Email ou Senha Invalida');
       setTimeout(() => setMensagem(''), 3000);
@@ -47,7 +45,7 @@ export default function AdminPage() {
         <div className='flex justify-start w-full'>
         {/* <Link className='link-home-Cadastro' to='/' element={<App/>}>Ir para Inicio</Link>  */}
         </div>
-        <form onSubmit={handleLogin} className="bg-blue-100 p-6 rounded shadow-md w-80 outline-0">
+        <form onSubmit={handleLogin} className="bg-blue-300 p-6 rounded shadow-md w-80 outline-0">
           <h2 className="text-xl font-bold mb-4 text-center">Login Administrador</h2>
 
           <input
@@ -55,7 +53,7 @@ export default function AdminPage() {
             placeholder="Email"
             value={credenciais.email}
             onChange={(e) => setCredenciais({ ...credenciais, email: e.target.value })}
-            className="w-full p-2 border rounded mb-4"
+            className="w-full p-2 border rounded mb-4 outline-0 bg-blue-50"
             required
           />
           <input
@@ -63,11 +61,11 @@ export default function AdminPage() {
             placeholder="Senha"
             value={credenciais.senha}
             onChange={(e) => setCredenciais({ ...credenciais, senha: e.target.value })}
-            className="w-full p-2 border rounded mb-4"
+            className="w-full p-2 border rounded mb-4 outline-0 bg-blue-50"
             required
           />
 
-          <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+          <button type="submit" className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600">
             Entrar
           </button>
         </form> 
