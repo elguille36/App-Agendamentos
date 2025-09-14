@@ -13,7 +13,7 @@ export default function Navbar() {
 
   return (
     <>
-    <nav className="bg-blue-500 text-amber-100 px-4 py-1 flex justify-between items-center">
+    <nav className="bg-blue-600 text-amber-100 px-4 py-1 flex justify-between items-center">
 
       {/* Botão para mobile */}
       <button onClick={toggleMenu} className="md:hidden text-blue-50 flex">

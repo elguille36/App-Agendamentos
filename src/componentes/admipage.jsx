@@ -41,7 +41,7 @@ export default function AdminPage() {
             </div>
             )}
       <Cabezalho/>
-      <div className="flex flex-col items-center justify-center h-screen bg-blue-50">
+      <div className="flex flex-col items-center justify-center h-screen">
         <div className='flex justify-start w-full'>
         {/* <Link className='link-home-Cadastro' to='/' element={<App/>}>Ir para Inicio</Link>  */}
         </div>
@@ -53,7 +53,7 @@ export default function AdminPage() {
             placeholder="Email"
             value={credenciais.email}
             onChange={(e) => setCredenciais({ ...credenciais, email: e.target.value })}
-            className="w-full p-2 border rounded mb-4 outline-0 bg-blue-50"
+            className="w-full p-2 border rounded mb-4 outline-0 bg-gray-100"
             required
           />
           <input
@@ -61,7 +61,7 @@ export default function AdminPage() {
             placeholder="Senha"
             value={credenciais.senha}
             onChange={(e) => setCredenciais({ ...credenciais, senha: e.target.value })}
-            className="w-full p-2 border rounded mb-4 outline-0 bg-blue-50"
+            className="w-full p-2 border rounded mb-4 outline-0 bg-gray-100"
             required
           />
 

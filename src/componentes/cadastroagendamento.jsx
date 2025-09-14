@@ -12,7 +12,7 @@ export default function AgendamentoForm() {
     data: '',
     horario: '',
     entrevista: '',
-    observacao: ''
+    observacao: '',
   });
 
   const handleChange = (e) => {
@@ -32,6 +32,7 @@ const handleSubmit = async (e) => {
      setMensagem('Erro ao criar agendamento.');
       setTimeout(() => setMensagem(''), 3000);
   }
+
 };
 
   return (
@@ -57,7 +58,7 @@ const handleSubmit = async (e) => {
         placeholder="Seu nome e Sobrenome"
         value={form.nome}
         onChange={handleChange}
-        className="w-full p-2 border border-gray-300 rounded bg-blue-100"
+        className="w-full p-2 border border-gray-300 rounded bg-gray-100"
         required
       />
 
@@ -66,7 +67,7 @@ const handleSubmit = async (e) => {
         name="data"
         value={form.data}
         onChange={handleChange}
-        className="w-full p-2 border border-gray-300 rounded bg-blue-100"
+        className="w-full p-2 border border-gray-300 rounded bg-gray-100"
         required
       />
 
@@ -75,7 +76,7 @@ const handleSubmit = async (e) => {
         name="horario"
         value={form.horario}
         onChange={handleChange}
-        className="w-full p-2 border border-gray-300 rounded bg-blue-100"
+        className="w-full p-2 border border-gray-300 rounded bg-gray-100"
         required
       />
 
@@ -83,7 +84,7 @@ const handleSubmit = async (e) => {
         name="entrevista"
         value={form.entrevista}
         onChange={handleChange}
-        className="w-full  p-2 border border-gray-300 rounded bg-blue-100"
+        className="w-full  p-2 border border-gray-300 rounded bg-gray-100"
         required
       >
         <option value="">Tipo de Agendamentos</option>
@@ -105,7 +106,7 @@ const handleSubmit = async (e) => {
         placeholder="Observações (outros assunto)"
         value={form.observacao}
         onChange={handleChange}
-        className="w-full p-2 border border-gray-300 rounded bg-blue-100"
+        className="w-full p-2 border border-gray-300 rounded bg-gray-100"
         rows="3"
       ></textarea>
 

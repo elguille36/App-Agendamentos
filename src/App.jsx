@@ -8,7 +8,7 @@ import Comunicado from './componentes/informacao'
 function App() {
   return (
     <>
-    <div className='w-full bg-blue-100 h-75 '>
+    <div className='w-full h-75 '>
       <div className='box-content-app'>
       <Cabezalho />
       </div>
