@@ -13,13 +13,14 @@ return(
 <p className="text-blue-950 text-center p-4 text-sm sm:text-base md:text-lg lg:text-xl transition-opacity" style={{ animation:'fade 4s linear infinite'}}>
     E eis que vos digo estas coisas para que aprendais sabedoria; 
    para que saibais que, quando estais a serviço de vosso próximo,
-   estais somente a serviço de vosso Deus. MOSIAH 2:17
+   estais somente a serviço de vosso Deus.<br/>
+   O Livro de Mormon : MOSIAH 2:17
 </p>
 <style>
   {`
     @keyframes fade {
       0% { opacity: 1; }
-      50% { opacity: 0.4; }
+      50% { opacity: 0.5; }
       100% { opacity: 1; }
     }
   `}

@@ -8,13 +8,13 @@ import Comunicado from './componentes/informacao'
 function App() {
   return (
     <>
-    <div className='w-full h-75 '>
+    <div className='w-full h-75 bg-blue-50 '>
       <div className='box-content-app'>
       <Cabezalho />
       </div>
        <NavBar /> 
     </div>
-    <div className='flex justify-center '>
+    <div className='flex justify-center bg-blue-100 shadow-inner'>
       <Comunicado/>
     </div>
     <div className='box-banner'>

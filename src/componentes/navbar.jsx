@@ -13,7 +13,7 @@ export default function Navbar() {
 
   return (
     <>
-    <nav className="bg-blue-600 text-amber-100 px-4 py-1 flex justify-between items-center">
+    <nav className="bg-blue-600 text-amber-50 px-4 py-1 flex justify-between items-center">
 
       {/* Botão para mobile */}
       <button onClick={toggleMenu} className="md:hidden text-blue-50 flex">
@@ -30,8 +30,8 @@ export default function Navbar() {
 
       {/* Menu Mobile - aparece quando o menuAberto for true */}
       {menuAberto && (
-        <div className="absolute top-45 left-15 rounded-md w-64 bg-blue-700 md:hidden">
-          <ul className="flex flex-col items-center space-y-4 py-4 underline-offset-2">
+        <div className="absolute top-38 left-15 rounded-md w-64 md:hidden">
+          <ul className="flex flex-col items-center space-y-4 py-4 underline-offset-2 text-blue-950 shadow-sm">
           <li><a onclick={toggleMenu} href='https://bit.ly/4jR3zWq' target='_blank'>Almoço con Misionarios</a></li>
           <li><a onclick={toggleMenu} href='https://docs.google.com/spreadsheets/d/1J5xSG7R2HJuGCKx1w34xqHyAXFKashB-7N8eBi_oTE8/edit?gid=1173913733#gid=1173913733' target='_blank'>Grupo da Limpeza</a></li>
           <li><Link onclick={toggleMenu} to='/cadastroAgendamento' element ={<CadastroAgendamento/>}>Agendamentos</Link></li>
